@@ -143,7 +143,6 @@ class PlotCluster:
         clusters = pd.Series([coords[cluster_labels == n] for n in range(num_clusters - 1)])
         scatclusters = pd.Series([scatcoords[scatcluster_labels == n] for n in range(scatnum_clusters - 1)])
 
-        # this function was taken from a webpage
         def get_centermost_point(cluster):
             # using the centroid attribute, pull out the centre point of each cluster
             centroid = (MultiPoint(cluster).centroid.x, MultiPoint(cluster).centroid.y)
